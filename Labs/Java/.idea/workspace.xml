@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7bf9dde2-e857-4ca3-8ba0-5c9a812beb95" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1V9iO9P9qmf6F3twYcW2dTNcMNk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lab03 - applet, draw" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bf9dde2-e857-4ca3-8ba0-5c9a812beb95" name="Default Changelist" comment="" />
+      <created>1576671677252</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576671677252</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl" timestamp="1576671701046">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1576671701046" />
+    <state x="626" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576671680800">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="626" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1576671680800" />
+  </component>
+</project>
