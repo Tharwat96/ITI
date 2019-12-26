@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="238bee93-0cf9-4b7d-ab93-205d96e1263a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VNkplf9izTiK224DH5Zxn0vMpJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../from shimaa/lab07 - java DB connection" />
+  </component>
+  <component name="RunManager" selected="Applet.DrawMultipleLines">
+    <configuration name="ButtonCount" type="Applet" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="button_count.ButtonCount" />
+      <module name="lab04 - AppletEventDraw" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DrawLine" type="Applet" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="draw_line.DrawLine" />
+      <module name="lab04 - AppletEventDraw" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DrawMultipleLines" type="Applet" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="draw_multiple_lines.DrawMultipleLines" />
+      <module name="lab04 - AppletEventDraw" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovingText" type="Applet" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="moving_text.MovingText" />
+      <module name="lab04 - AppletEventDraw" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Applet.DrawMultipleLines" />
+        <item itemvalue="Applet.DrawLine" />
+        <item itemvalue="Applet.MovingText" />
+        <item itemvalue="Applet.ButtonCount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SQLPlugin.ProjectConfiguration">
+    <queries />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="238bee93-0cf9-4b7d-ab93-205d96e1263a" name="Default Changelist" comment="" />
+      <created>1577101124334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577101124334</updated>
+      <workItem from="1577101127666" duration="9694000" />
+      <workItem from="1577138214872" duration="5000" />
+      <workItem from="1577184961630" duration="1089000" />
+      <workItem from="1577186822355" duration="15000" />
+      <workItem from="1577191034931" duration="646000" />
+      <workItem from="1577194934833" duration="684000" />
+      <workItem from="1577202734393" duration="612000" />
+      <workItem from="1577210700241" duration="7000" />
+      <workItem from="1577283719436" duration="629000" />
+      <workItem from="1577327722306" duration="26000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="768" y="226" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1577106693634">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="768" y="226" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1032@0.0.1920.1032" timestamp="1577106693634" />
+    <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl" timestamp="1577327745616">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1577327745616" />
+    <state width="1872" height="260" key="GridCell.Tab.0.bottom" timestamp="1577186751255">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1577186751255" />
+    <state width="1872" height="260" key="GridCell.Tab.0.center" timestamp="1577186751254">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="260" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1577186751254" />
+    <state width="1872" height="260" key="GridCell.Tab.0.left" timestamp="1577186751254">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="260" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1577186751254" />
+    <state width="1872" height="260" key="GridCell.Tab.0.right" timestamp="1577186751254">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="260" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1577186751254" />
+    <state width="1872" height="321" key="GridCell.Tab.1.bottom" timestamp="1577111687498">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="321" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1577111687498" />
+    <state width="1872" height="321" key="GridCell.Tab.1.center" timestamp="1577111687498">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="321" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1577111687498" />
+    <state width="1872" height="321" key="GridCell.Tab.1.left" timestamp="1577111687498">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="321" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1577111687498" />
+    <state width="1872" height="321" key="GridCell.Tab.1.right" timestamp="1577111687498">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1872" height="321" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1577111687498" />
+    <state x="626" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1577327725561">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="626" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1577327725561" />
+    <state x="282" y="94" width="1345" height="846" key="new project wizard" timestamp="1577186748852">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="282" y="94" width="1345" height="846" key="new project wizard/0.0.1920.1032@0.0.1920.1032" timestamp="1577186748852" />
+  </component>
+</project>
