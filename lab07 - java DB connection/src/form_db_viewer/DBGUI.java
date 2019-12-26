@@ -44,13 +44,13 @@ public class DBGUI extends javax.swing.JFrame {
     public void getGuiTextFields(Employee e)
     {
 
-            jID = id.getText(Integer.toString(e.getID()));
-            jFirstName = firstName.getText(e.getFirstName());
-            jMiddleName = middleName.getText(e.getMiddleName());
-            jLastName = lastName.getText(e.getLastName());
-            jEmail = email.getText(e.getEmail());
-            jPhone = phone.getText();
-        }
+            jID = Integer.parseInt(id.getText());
+            jFirstName = firstName.getText();
+            jMiddleName = middleName.getText();
+            jLastName = lastName.getText();
+            jEmail = email.getText();
+            jPhone = Integer.parseInt(phone.getText());
+
     }
 
     /**
@@ -289,7 +289,7 @@ public class DBGUI extends javax.swing.JFrame {
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
 
-        updateEmployee();
+//        updateEmployee();
     }//GEN-LAST:event_DeleteActionPerformed
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed

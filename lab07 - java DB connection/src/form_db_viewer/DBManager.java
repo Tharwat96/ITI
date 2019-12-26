@@ -46,6 +46,31 @@ public class DBManager {
         }
     }
 
+    public void openConnection()
+    {
+        try{
+            rs1 = con.getMetaData().getCatalogs();
+            System.out.println(rs1);
+
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void closeConnection()
+    {
+        try
+        {
+        //closing statement
+        con.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void getData() throws SQLException
     {
         Employee e;
@@ -67,7 +92,7 @@ public class DBManager {
     public Employee getNextEmployee()
     {
 
-        if(counter >= 0 && counter <= emp.size())
+        if(counter >= 0 && counter < emp.size())
         {
 //            if(counter == 0)
 //            {
@@ -117,6 +142,23 @@ public class DBManager {
         pst.setInt(2, e2.getID());
         ResultSet rs = pst.executeQuery() ;
         getData();
+    }
+
+    public void deleteEmployee(int id)
+    {
+        try
+        {
+            //emp.remove(counter);
+            PreparedStatement pre = con.prepareStatement("DELETE FROM Employees WHERE ID = ?");
+            pre.setInt( 1 , id);
+            pre.executeUpdate();
+            getData();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
 
 }
