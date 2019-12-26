@@ -1,0 +1,39 @@
+1- sudo useradd -c "Islam Askar" islam
+   sudo passwd islam
+2- sudo useradd -c "Bad User" baduser
+   sudo passwd baduser
+3- sudo groupadd -g 30000 pgroup
+4- sudo groupadd badgroup
+5- sudo usermod -aG pgroup islam
+
+6- sudo passwd islam
+
+7- sudo passwd -x 30 islam
+8- sudo usermod -L baduser
+9- sudo userdel baduser
+10- sudo groupdel badgroup
+
+13- mkdir ~/myteam
+    chmod u=r ~/myteam
+
+14- su - islam
+15- sudo cd /home/tharwatabouhelal - islam is not in sudoers file
+16- 	a- chmod u=rw,g=xw,o=x oldpasswd
+	   chmod 631 oldpasswd 
+
+	b- umask 146 >>>DIDN'T WORK<<<
+
+	c- -rw-rw-rw-	666
+	   drwxrwxrwx	777
+
+	d- umask 777
+17- 
+	minimum permission:	Source	  |	Destination
+	- Copy			d: 5 f: 4	d: 3
+	- delete 		d: 3 f:0		
+	- change to dir		d: 1
+	- list dir content	d: 4
+	- view file content	d: 1 f: 4
+	- modify file content	d: 1 f: 2
+18- couldn't modify but removed it because of directory access
+19- x for a file means the ability to execute it, for folder it is the ability to access it

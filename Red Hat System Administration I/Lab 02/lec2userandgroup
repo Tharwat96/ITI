@@ -1,0 +1,159 @@
+ls -l 
+drwxrwxr-x. 2 fatma fatma 4096 Dec 11 20:16 dir1
+-rw-rw-r--. 1 fatma fatma    0 Dec 11 20:16 f1
+
+3 types of users
+-----------------
+root               0
+service user      - start  stop reload service    1-999
+normal user
+
+
+cat /etc/passwd
+7 fields
+
+root:x:0:0:root:/root:/bin/bash
+name:password:userid(uid):groupid(gid):comment:homeDirectory:LoginShell
+
+fatma:x:1000:1000:fatma:/home/fatma:/bin/bash
+
+man 5 passwd 
+
+
+The /etc/passwd file is a text file that describes user login accounts for the system.
+It should have read permission allowed for all users, but write access only for the superuser.
+Each line of the file describe a single user, and contains seven colon-separated fileds.
+
+which bash
+
+
+
+
+sudo useradd -u uid -g gid -c "comment" -md /home/user -s /bin/bash username
+sudo passwd username
+
+
+id 
+id -u
+
+id ahmed 
+id -u ahmed
+----------------------------------------------------------------------------
+
+man 5 group
+
+cat /etc/group
+
+root:x:0:
+group_name:password:GID:user_list(comma-separated list of group members)
+
+
+sudo groupadd cloud -g 2000
+sudo usermod -G cloud user1             (add secondary group)
+id
+------
+sudo groupadd App -g 2000
+sudo usermod -G cloud user1        (override)
+
+sudo usermod -aG cloud user1               add (apend)
+
+sudo usermod -g cloud user1           (modify secondary group)
+
+id 
+
+-------------------------------------------------------------------------
+
+sudo usermod  -s /usr/sbin/nologin        user1
+              -c "comment" 
+              -md /home/user
+              -g gid
+              -u uid 
+              -l new
+              -p passwd
+ 
+
+passwd user1
+
+sudo usermod -L user1     lock
+sudo usermod -U user2      unlock
+
+----------------------------------------------------------------------------
+groupmod -g 2005 cloud
+groupmod -n mew old
+
+---------------------------------------------------------------------------
+sudo userdel username
+sudo userdel -r username
+sudo groupdel cloud
+
+-------------------------------------------------------------------------
+vim /etc/sudoers
+
+root ALL=(ALL)
+
+fatma ALL=(ALL)
+--------------------------------------------------------------------------
+man 5 shadow
+
+cat /etc/shadow 
+
+username:encrypted passwd:datelastchanged:min:max:warn:inactive:
+expire:future-use
+
+Included fields are:
+
+1-Login name
+2-Encrypted password
+3-Days since Jan 1, 1970 that password was last changed
+4-Min-Days before password may not be changed
+5-Max-Days after which password must be changed
+6-warn-Days before password is to expire that user is warned
+7-expire-inactive-Days after password expires that account is disabled
+8-Days since Jan 1, 1970 that account is disabled
+
+chage -l fatma
+---------------
+
+Last password change					: never
+Password expires					: never
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 99999
+Number of days of warning before password expires	: 7
+
+------------------------------------------------------------------
+sudo chage -m 2      user1                      (min)
+           -M 60                                (max)
+           -w 6                                 (warning)
+           -E 2020-1-1                          (expiration)
+
+passwd -x 90 user2
+(passwd will expire after 90 days)
+
+-------------------------------------------------------------
+touch /etc/skel/test_file
+
+useradd ahmed 
+cd /home/ahmed
+ls -l
+---test_file
+--------------------------------------------------------------
+newusers file
+---------------------------------------------------------------
+chown user1 file
+chown :group1 file 
+chown user1:group1 file
+
+chown -R user2:group3 dir1
+
+
+
+
+
+
+
+
+
+
+

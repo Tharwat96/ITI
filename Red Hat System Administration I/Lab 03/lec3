@@ -1,0 +1,96 @@
+vi text editor
+(virtual editor)
+command line editor
+
+
+3 basic modes
+-command mode  (Default mode)(each char. perform command)
+-insert mode    (i)
+-last line mode   (search /, replace)   (Esc)  :wq!  :q!
+
+vi fname 
+
+vi 
+
+
+----------------------------------------------------------
+echo iti
+echo name
+name=mohamed
+echo name
+echo $name
+
+
+$HOME
+$PATH
+$SHELL
+$PWD
+$USER
+$HOSTNAME
+
+
+
+man bash    :all env. variables in bash shell
+List all of the environment variables for the bash shell
+
+/Shell Variables
+
+
+env         :List the environment variables in your current shell
+printenv    :
+-environment variables with values
+
+printenv SHELL
+
+
+----------------------------------------------------------
+echo = print value of specific variable 
+printenv = 
+
+
+set?
+
+--------------------------------
+
+first.sh 
+#!/usr/bin/bash
+echo welcomeToITI
+-----------------
+chmod 777 first.sh 
+./first.sh
+---------------------------------------
+to run without ./
+write path in $PATH
+
+
+PATH=$PATH:/home/fatma/script/first.sh
+
+temp.
+to be permanant 
+write in file
+
+
+--------------------------------------------
+Global Initialization file
+/etc/profile
+
+file execute when 
+
+
+./profile
+
+
+
+
+-------------------------------------------
+vi .bashrc
+echo hello
+date
+cal
+PS1="fatma>"
+
+alias l='ls -l'
+
+ 
+PATH=$PATH:/home/fatma/scripts
+

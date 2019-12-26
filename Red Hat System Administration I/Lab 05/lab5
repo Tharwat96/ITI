@@ -1,0 +1,43 @@
+1- gzip CentOS-7-x86_64-DVD-1908.iso 	gunzip CentOS-7-x86_64-DVD-1908.iso.gz
+   compress -v CentOS-7-x86_64-DVD-1908.iso uncompress -v CentOS-7-x86_64-DVD-1908.iso 
+original: 32M
+gzip: 4.2M	lsr.gz
+compress: 7.3M	lsr.Z
+
+2- zcat file
+3- sudo tar cvf etc.tar /etc
+4- find ~ -mtime -2
+5- find /etc -user root
+6- find ~ -type d
+7- sudo find / -name ".profile" -type f
+8- /etc/passwd: ASCII text
+/dev/pts/0: character special
+/etc: directory
+/dev/sda: block special
+
+
+====file type====
+Regular file(-) 
+Directory files(d) 
+Special files
+
+    Block file(b)
+    Character device file(c)
+    Named pipe file or just a pipe file(p)
+    Symbolic link file(l)
+    Socket file(s)
+====================
+
+9- inode number of the following:
+ls -id
+/		64 
+/etc		268594433
+/etc/hosts	268595642    ls -i 
+
+10- cmp /etc/passwd ~/passwd
+diff /etc/passwd ~/passwd
+
+cmp showed only that a difference happened, diff showed the difference line
+11- sudo ln -s /etc/passwd /boot
+12- ln: failed to create hard link ‘/boot/passwd’ => ‘/etc/passwd’: Invalid cross-device link
+not in the same partition so it failed to create a hard link
