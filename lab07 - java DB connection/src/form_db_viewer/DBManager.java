@@ -27,17 +27,9 @@ public class DBManager {
         emp = new Vector<Employee>();
         try
         {
-           
-//            Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection(
-                    "jdbc:mysql://127.0.0.1:3306/lab07","root","mysql");
-//here lab07 is database name, root is username
-            ResultSet rs1 = con.getMetaData().getCatalogs();
-            System.out.println(rs1);
-            Statement stmt=con.createStatement();
-            rs=stmt.executeQuery("select * from Employees");
+//            rs = con.getMetaData().getCatalogs();
+            openConnection();
             getData();
-            stmt.close();       //closing statement
             con.close();
         }
         catch(Exception e)
@@ -48,9 +40,13 @@ public class DBManager {
 
     public void openConnection()
     {
+
         try{
-            rs1 = con.getMetaData().getCatalogs();
-            System.out.println(rs1);
+            con=DriverManager.getConnection(
+                    "jdbc:mysql://127.0.0.1:3306/lab07","root","mysql");
+                //here lab07 is database name, root is username
+//            rs1 = con.getMetaData().getCatalogs();
+//            System.out.println(rs1);
 
         }catch(Exception e)
         {
@@ -73,6 +69,8 @@ public class DBManager {
 
     public void getData() throws SQLException
     {
+        Statement stmt=con.createStatement();
+        rs=stmt.executeQuery("select * from Employees");
         Employee e;
         while(rs.next())
         {
@@ -81,6 +79,8 @@ public class DBManager {
             //System.out.println();
             //System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3));
         }
+        stmt.close();       //closing statement
+        con.close();
     }
     
     public int getVectorSize()
@@ -137,11 +137,23 @@ public class DBManager {
     public void updateEmployee(int pos, Employee e1) throws SQLException {
         Employee e2;
         e2 = emp.get(pos);
-        PreparedStatement pst = con.prepareStatement("UPDATE Employees SET ID=? WHERE ID=?;");
-        pst.setInt (1, e1.getID());
-        pst.setInt(2, e2.getID());
-        ResultSet rs = pst.executeQuery() ;
+        openConnection();
+        PreparedStatement pst = con.prepareStatement
+        (
+        "UPDATE Employees " +
+            "SET FirstName=?, MiddleName=?, LastName=?, Email=?, Phone=? " +
+            "WHERE ID=?;"
+        );
+        pst.setString (1, e1.getFirstName());
+        pst.setString (2, e1.getMiddleName());
+        pst.setString (3, e1.getLastName());
+        pst.setString (4, e1.getEmail());
+        pst.setInt (5, e1.getPhone());
+        pst.setInt(6, e2.getID());
+        pst.executeUpdate() ;
         getData();
+        pst.close();
+        closeConnection();
     }
 
     public void deleteEmployee(int id)

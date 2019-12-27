@@ -6,6 +6,7 @@
 package form_db_viewer;
 
 
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,7 +42,7 @@ public class DBGUI extends javax.swing.JFrame {
         }
     }
 
-    public void getGuiTextFields(Employee e)
+    public void getGuiTextFields()
     {
 
             jID = Integer.parseInt(id.getText());
@@ -51,6 +52,16 @@ public class DBGUI extends javax.swing.JFrame {
             jEmail = email.getText();
             jPhone = Integer.parseInt(phone.getText());
 
+    }
+
+    public void setEmployee(Employee e)
+    {
+        e.setId(Integer.parseInt(id.getText()));
+        e.setFirstName(firstName.getText());
+        e.setMiddleName(middleName.getText());
+        e.setLastName(lastName.getText());
+        e.setEmail(email.getText());
+        e.setPhone(Integer.parseInt(phone.getText()));
     }
 
     /**
@@ -287,24 +298,31 @@ public class DBGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_newBtnActionPerformed
 
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-        // TODO add your handling code here:
-
-//        updateEmployee();
+        Employee e;
+        e = new Employee();
+        setEmployee(e);
+        e.setFirstName(e.getFirstName());
+        try{
+            dbMan.updateEmployee(dbMan.counter, e);
+        }
+        catch (SQLException ex) {
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_DeleteActionPerformed
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_DeleteActionPerformed
 
     private void firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstActionPerformed
-        // TODO add your handling code here:
         Employee e1;
         e1 = dbMan.getFirstEmployee();
         setGuiTextFields(e1);
     }//GEN-LAST:event_firstActionPerformed
 
     private void previousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previousActionPerformed
-        // TODO add your handling code here:
+        // TODO do a final check
         Employee e1;
         e1 = dbMan.getPreviousEmployee();
         setGuiTextFields(e1);
