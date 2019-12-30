@@ -19,7 +19,8 @@ public class ChatClient{
         ui.setVisible(true);
         try
         {
-            s = new Socket("127.0.0.1", 4900);
+            s = new Socket("127.0.0.1", 4800);
+            System.out.println("s.getPort()");
             dataInputStream = new DataInputStream(s.getInputStream());
             printStream = new PrintStream(s.getOutputStream());
             new Thread(new Runnable() {
@@ -46,19 +47,12 @@ public class ChatClient{
             e.printStackTrace();
         }
 
-        try
-        {
-            dataInputStream.close();
-            printStream.close();
-            s.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
     }
 
     public static void main(String[] args) {
-        ChatClient chatClient = new ChatClient();
+        ChatClient chatClient1 = new ChatClient();
+        ChatClient chatClient2 = new ChatClient();
     }
     public void sendMsg(String s)
     {

@@ -27,14 +27,7 @@ class ChatHandler extends Thread
             e.printStackTrace();
         }
 
-//        try
-//        {
-//            dataInputStream.close();
-//            printStream.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
 
     }
 

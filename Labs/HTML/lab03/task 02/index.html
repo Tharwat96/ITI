@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Hut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Upper Navbar */
+        div ul
+        {
+            width:100%;
+        }
+        div ul li
+        {
+            font-family:Arial, Helvetica, sans-serif;
+            list-style-type: none;
+            float: left;
+            width: 16%;
+            text-align: center;
+            border-top: solid 1px grey;
+            border-right: solid 1px grey;
+            padding: 10px 5px;
+            font-weight: bold;
+            
+        }
+
+        ul li a
+        {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* **************** */
+
+        /* Cover navbar */
+
+        #cover
+        {
+            position: absolute;
+            width: 100%;
+            top: 150px;
+        }
+        #cover img
+        {
+            width: 100%; 
+
+            
+        }
+
+        #cover ul
+        {
+            height: 40px;
+            width: 100%;
+            list-style-type: none;
+            position: absolute;
+            top:230px;
+            background-color: grey;
+            opacity: 0.7;
+            
+        }
+
+        #cover ul li
+        {
+            width: 13%;
+            color: white;
+        }
+
+        #cover ul li a
+        {
+            color: white;
+        }
+
+        #cover ul li a:hover
+        {
+            text-decoration: underline;
+        }
+        /* ************* */
+
+        /* Cards */
+
+        .cards
+        {
+            background-color: lightgray;
+            margin-top: 300px;
+            
+            /* margin: 350px 10px 150px 150px; */
+            height: 1000px;
+            width: 100%;
+
+        }
+        .card
+        {
+            float: left;
+            margin-left: 70px;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: white;
+            width: 520px;
+            height: 240px;
+        }
+
+        .card h2, .card img
+        {
+            text-align: center;
+        }
+        .card div:first-child
+        {
+            float: left;
+            margin-right: 10px;
+        }
+        .card div:nth-child(2)
+        {
+            margin-top: 10px;
+        }
+
+        .card select
+        {
+            height: 30px;
+        }
+        .card select:nth-child(3) /*pizza type select*/
+        {
+            width: 180px;
+        }
+        .card select:nth-child(4)   /*size select*/
+        {
+            margin-top: 50px;
+            width: 120px;
+        }
+
+        .card input:nth-child(5)
+        {
+            border-radius: 10px;
+            background-color: gray;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+            width: 120px;
+            height: 40px;
+        }
+
+        .card input:nth-child(6)
+        {
+            border-radius: 10px;
+            background-color: #ff3333;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+            width: 180px;
+            height: 45px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <img src="src/2.png">
+    </div>
+    <div>
+        <ul>
+            <li><a href="">PIZZA</a></li>
+            <li><a href="">STARTERS</a></li>
+            <li><a href="">SALADS</a></li>
+            <li><a href="">MORE <i class="fa fa-angle-down" style="font-size:19px;color:red"></i>
+            </a></li>
+            <li style="background-color: orange;"><a href="">DEALS</a></li>
+            <li style="background-color: #701c1c; color:white;"><a href="">START YOUR ORDER</a></li>
+        </ul>
+    </div>
+    <div id="cover">
+            <img src="src/3.png">
+            <ul>
+                <li><a href="">ALL</a></li>
+                <li><a href="">BEEF</a></li>
+                <li><a href="">CHICKEN</a></li>
+                <li><a href="">VEGETARIAN</a></li>
+                <li><a href="">SPECIALITY</a></li>
+                <li><a href="">EXTREME PIZZA</a></li>
+                <li><a href="">SEA FOOD</a></li>
+            </ul>       
+    </div>
+
+    <div class="cards">       <!-- cards container -->
+        <div class="card">   <!-- first card -->
+            <div>   <!-- pizza img and price -->
+                <img src="src/4.png">
+                <h2>EGP 75.88</h2>
+            </div>
+            <div>   <!-- rest of card -->
+                <h4>SUPER SUPREME</h4>
+                <p>Our famous combination of Beef Pepperoni, juicy Beef, Mushrooms, Green Peppers, Onions, Black Olives and melting mozzarella cheese.</p>
+                <select>
+                    <option value="Pan">Pan</option>
+                </select>
+                <select>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <input type="button" value="CUSTOMIZE">
+                <input type="button" value="ADD TO CART">
+            </div>
+        </div>
+        <div class="card">   <!-- second card -->
+            <div>   <!-- pizza img and price -->
+                <img src="src/5.png">
+                <h2>EGP 64.47</h2>
+            </div>
+            <div>   <!-- rest of card -->
+                <h4>CLASSIC PEPPERONI</h4>
+                <p>One of our all time specialties, A meaty feast of Pepperoni, Mushroom, Black Olives, mozzarella cheese and tomato sauce. </p>
+                <select>
+                    <option value="Pan">Pan</option>
+                </select>
+                <select>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <input type="button" value="CUSTOMIZE">
+                <input type="button" value="ADD TO CART">
+            </div>
+        </div>
+        <div class="card">   <!-- third card -->
+            <div>   <!-- pizza img and price -->
+                <img src="src/6.png">
+                <h2>EGP 75.88</h2>
+            </div>
+            <div>   <!-- rest of card -->
+                <h4>CHICKEN SUPREME</h4>
+                <p>Our famous combination of Beef Pepperoni, juicy Beef, Mushrooms, Green Peppers, Onions, Black Olives and melting mozzarella cheese.</p>
+                <select>
+                    <option value="Pan">Pan</option>
+                </select>
+                <select>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <input type="button" value="CUSTOMIZE">
+                <input type="button" value="ADD TO CART">
+            </div>
+        </div>
+        <div class="card">   <!-- first card -->
+            <div>   <!-- pizza img and price -->
+                <img src="src/4.png">
+                <h2>EGP 75.88</h2>
+            </div>
+            <div>   <!-- rest of card -->
+                <h4>SUPER SUPREME</h4>
+                <p>Our famous combination of Beef Pepperoni, juicy Beef, Mushrooms, Green Peppers, Onions, Black Olives and melting mozzarella cheese.</p>
+                <select>
+                    <option value="Pan">Pan</option>
+                </select>
+                <select>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <input type="button" value="CUSTOMIZE">
+                <input type="button" value="ADD TO CART">
+            </div>
+        </div>
+        <div class="card">   <!-- first card -->
+            <div>   <!-- pizza img and price -->
+                <img src="src/4.png">
+                <h2>EGP 75.88</h2>
+            </div>
+            <div>   <!-- rest of card -->
+                <h4>SUPER SUPREME</h4>
+                <p>Our famous combination of Beef Pepperoni, juicy Beef, Mushrooms, Green Peppers, Onions, Black Olives and melting mozzarella cheese.</p>
+                <select>
+                    <option value="Pan">Pan</option>
+                </select>
+                <select>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <input type="button" value="CUSTOMIZE">
+                <input type="button" value="ADD TO CART">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

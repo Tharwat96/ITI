@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0;
+            padding: 0;
+        }
+        body
+        {
+            background-color: pink;
+            width: 50%;
+            margin: 30px auto;
+        }
+        form
+        {
+            background-color: white;
+            /* border: solid 2px red; */
+            height: 700px;
+            width: 600px;
+        }
+        table
+        {            
+            border: solid 5px red;
+
+            height: 100%;
+            width: 599px;
+
+        }
+        h1
+        {
+            text-align: center;
+        }
+        td
+        {
+            border: solid 2px red;
+
+            padding: 2px 20px 2px 5px;
+        }
+
+        td input[type="text"], td input[type="password"]
+        {
+            width: 200px;
+        }
+
+        .buttons
+        {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+ 
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="2">
+                        <h1>Registration Form</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    User Name
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pass
+                </td>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <td>Track</td>
+                <td>
+                    <select>
+                        <option value="SD">SD</option>
+                        <option value="OSD">OSD</option>
+                        <option value="CPD">CPD</option>
+                        
+                     </select>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Gender</td>
+                <td><input type="radio" name="gender"> Male</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="gender"> Female</td>
+            </tr>
+            <tr>
+                <td>Favorites</td>
+                <td>
+                        <input type="checkbox"> Football 
+                        <input type="checkbox"> Basketball 
+                        <input type="checkbox"> Games <br>
+                        <input type="checkbox"> Reading 
+                        <input type="checkbox"> Swimming 
+                        <input type="checkbox"> Travel 
+                </td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><textarea cols="25" rows="5" ></textarea></td>
+            </tr>
+            <tr class="buttons">
+                <td colspan="2">
+                    <input type="button" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

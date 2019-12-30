@@ -21,11 +21,11 @@ public class ChatServer {
 
 
     public ChatServer() throws IOException {
+        serverSocket = new ServerSocket(4800);
         while(true)
         {
             try
             {
-                serverSocket = new ServerSocket(4900);
                 Socket s = serverSocket.accept();
                 System.out.println("accepted socket");
                 ch = new ChatHandler(s);
@@ -34,16 +34,11 @@ public class ChatServer {
             }
 
             catch (IOException e) {
-//                e.printStackTrace();
+                e.printStackTrace();
             }
-//            try
-//            {
-//                s.close();
-//                serverSocket.close();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
+
         }
+
     }
 
 

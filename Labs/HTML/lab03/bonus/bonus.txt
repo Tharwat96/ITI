@@ -1,0 +1,5 @@
+CSS Clear property: prevents floating elements whether on the right or the left side of selected element
+
+CSS Box-Sizing property: 
+It sets how the overall width and height are calculated, the default value for this property is "content-box" which adds the padding and borders to outside the element specified width and height which results in a bigger element if a border or padding were used.
+the other value that can be set to is "border-box" which use the specifiec width and height and apply the padding and border on the inside of the element which should not result in an increase in the element specified width and height except if there is no enough space.
