@@ -19,7 +19,7 @@ import static java.nio.file.Files.readAllBytes;
 public class Main extends Application {
     Controller controller = new Controller();
     TextArea textArea;
-    File file;
+    File fileOpened;
     private FileChooser fileChooser = new FileChooser();
 
 
@@ -58,9 +58,22 @@ public class Main extends Application {
                 catch (IOException e) {
                     e.printStackTrace();
                 }
+                primaryStage.setTitle(fileOpened.getName());
+            }
+        });
+        //save event
+        save.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    saveFile(primaryStage);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
+
 
 
 
@@ -104,8 +117,24 @@ public class Main extends Application {
 
     public void openFile(Window stage) throws IOException {
         String line;
-        file = fileChooser.showOpenDialog(stage);
-        byte[] bytes = Files.readAllBytes(file.toPath());
+        fileOpened = fileChooser.showOpenDialog(stage);
+        byte[] bytes = Files.readAllBytes(fileOpened.toPath());
+        String lines = new String(bytes);
+        textArea.setText(lines);
+
+
+    }
+
+    public void saveFile(Window stage) throws IOException {
+        String lines = new String(textArea.getText());
+        byte[] bytes = lines.getBytes();
+        Files.write(fileOpened.toPath(), bytes);
+    }
+
+    public void saveAsFile(Window stage) throws IOException {
+        String line;
+        fileOpened = fileChooser.showSaveDialog(stage);
+        byte[] bytes = Files.readAllBytes(fileOpened.toPath());
         String lines = new String(bytes);
         textArea.setText(lines);
 
