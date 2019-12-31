@@ -6,10 +6,21 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+
+import java.io.*;
+import java.nio.file.Files;
+
+import static java.nio.file.Files.readAllBytes;
 
 public class Main extends Application {
     Controller controller = new Controller();
+    TextArea textArea;
+    File file;
+    private FileChooser fileChooser = new FileChooser();
+
 
 
     @Override
@@ -32,10 +43,17 @@ public class Main extends Application {
         open.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                controller.openFile(primaryStage);
+                try
+                {
+                    openFile(primaryStage);
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
+
 
         /*EDIT menu*/
         Menu edit = new Menu("Edit");
@@ -61,8 +79,7 @@ public class Main extends Application {
         topBar.getMenus().addAll(file, edit, about);
 
 
-        TextArea textArea = new TextArea();
-
+        textArea = new TextArea();
         /*Main panel*/
         BorderPane rootPane = new BorderPane();
         rootPane.setTop(topBar);
@@ -76,6 +93,14 @@ public class Main extends Application {
     }
 
 
+    public void openFile(Window stage) throws IOException {
+        String line;
+        file = fileChooser.showOpenDialog(stage);
+        byte[] bytes = Files.readAllBytes(file.toPath());
+        String lines = new String(bytes);
+        textArea.setText(lines);
+
+    }
 
 
     public static void main(String[] args) {

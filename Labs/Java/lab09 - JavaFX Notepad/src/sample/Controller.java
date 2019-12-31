@@ -10,7 +10,6 @@ public class Controller {
     private FileOutputStream fileOutputStream;
     private FileReader fileReader;
     private FileWriter fileWriter;
-    final FileChooser fileChooser = new FileChooser();
 
 
     Controller()
@@ -21,12 +20,7 @@ public class Controller {
         fileWriter = null;
     }
 
-    public void openFile(Window stage) throws FileNotFoundException {
-        file = fileChooser.showOpenDialog(stage);
-        FileInputStream fileInputStream = new FileInputStream(file);
-        fileReader.read();
 
-    }
 
     public File getFile()
     {
