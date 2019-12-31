@@ -73,7 +73,13 @@ public class Main extends Application {
 
             }
         });
-
+        //exit event
+        exit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                primaryStage.close();
+            }
+        });
 
 
 
