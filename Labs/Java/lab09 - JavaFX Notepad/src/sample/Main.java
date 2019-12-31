@@ -2,6 +2,7 @@ package sample;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -39,6 +40,13 @@ public class Main extends Application {
         file.getItems().addAll(neo, open, save, sep1, exit);
 
             /*Event handlers*/
+        //neo "new" event
+        neo.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                textArea.setText("");
+            }
+        });
         //open event
         open.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -53,6 +61,7 @@ public class Main extends Application {
 
             }
         });
+
 
 
         /*EDIT menu*/
