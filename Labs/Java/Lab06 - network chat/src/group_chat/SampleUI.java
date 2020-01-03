@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Vector;
 
 public class SampleUI extends JFrame {
     private ChatClient chatClient;
@@ -15,7 +14,7 @@ public class SampleUI extends JFrame {
     public SampleUI(ChatClient chatClient){
         this.chatClient = chatClient;
         this.setLayout(new FlowLayout());
-        ta=new JTextArea(5,150);
+        ta=new JTextArea(5,35);
         scroll=new JScrollPane(ta);
         scroll.setViewportView(ta);
         tf=new JTextField(30);

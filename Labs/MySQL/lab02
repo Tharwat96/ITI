@@ -1,0 +1,103 @@
+1- mysql> ALTER TABLE students ADD COLUMN Gender char(1);
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE students ADD COLUMN Gender2 ENUM("Male", "Female");
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+2- mysql> ALTER TABLE students ADD Birthdate date;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+3- mysql> ALTER TABLE students ADD FirstName varchar(40), LastName varchar(40) AFTER id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LastName varchar(40) AFTER id' at line 1
+mysql> ALTER TABLE students ADD FirstName varchar(40) AFTER id;
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE students ADD LastName varchar(40) AFTER FirstName;
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+4- 
+ALTER TABLE 
+DROP Address, email;
+
+ALTER TABLE 
+ADD Contact_Info;
+
+
+5- ALTER TABLE students_subjects DROP FOREIGN KEY students_subjects_ibfk_2;`
+
+mysql> ALTER TABLE students_subjects ADD CONSTRAINT stsu_cascade_id FOREIGN KEY (subject_id) REFERENCES `subjects` (`id`) ON DELETE CASCADE;
+Query OK, 5 rows affected (0.07 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+6- UPDATE students 
+SET FirstName="Tharwat", LastName="Abouhelal"
+WHERE id=1;
+
+7- mysql> SELECT * FROM students;
++----+-----------+-----------+---------------+----------+--------+-----------+
+| id | FirstName | LastName  | email         | Address  | Gender | Birthdate |
++----+-----------+-----------+---------------+----------+--------+-----------+
+|  1 | Tharwat   | Abouhelal | tharwat@gmail | rehab    | NULL   | NULL      |
+|  2 | NULL      | NULL      | mostafa@gmail | yasmeen  | NULL   | NULL      |
+|  3 | NULL      | NULL      | Ahmed@gmail   | shoubra  | NULL   | NULL      |
+|  4 | NULL      | NULL      | mohamed@gmail | tahrir   | NULL   | NULL      |
+|  5 | NULL      | NULL      | bassam@gmail  | matareya | NULL   | NULL      |
++----+-----------+-----------+---------------+----------+--------+-----------+
+5 rows in set (0.00 sec)
+
+8- mysql> SELECT * FROM students WHERE Gender='M';
++----+-----------+-----------+---------------+---------+--------+-----------+
+| id | FirstName | LastName  | email         | Address | Gender | Birthdate |
++----+-----------+-----------+---------------+---------+--------+-----------+
+|  1 | Tharwat   | Abouhelal | tharwat@gmail | rehab   | M      | NULL      |
++----+-----------+-----------+---------------+---------+--------+-----------+
+1 row in set (0.00 sec)
+
+9- mysql> SELECT COUNT(*) FROM students WHERE Gender='Female';
++----------+
+| COUNT(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+10- SELECT * FROM students WHERE Birthdate < '1992-10-01';
+11- SELECT * FROM students WHERE Birthdate < '1991-10-01' AND Gender='Male';
+12-
+SELECT Name, Max_score FROM subjects ORDER BY Max_score;
+SELECT Name, MAX(Max_score) FROM subjects;
++------+----------------+
+| Name | MAX(Max_score) |
++------+----------------+
+| C    |            100 |
++------+----------------+
+1 row in set (0.00 sec)
+
+13- SELECT Name FROM subjects HAVING MAX(Max_score);
+14- SELECT FirstName FROM students WHERE FirstName LIKE 'A%';
+15- SELECT COUNT(*) FROM students WHERE FirstName LIKE 'Mohammed';
+16- 
+SELECT COUNT(*) FROM students GROUP BY Gender; 
+17- 
+SELECT FirstName, COUNT(*) FROM students GROUP BY FirstName HAVING COUNT(*) > 2;
+
+18- 
+mysql> SELECT FirstName, score,Name from students,subjects,student_exams WHERE students.id=student_id and subjects.id = subject_id;
++-----------+-------+------+
+| FirstName | score | Name |
++-----------+-------+------+
+| Noha      |    60 | OS   |
+| Asser     |    83 | C    |
++-----------+-------+------+
+2 rows in set (0.00 sec)
+
+
+19- 
+DELETE FROM students WHERE id IN (SELECT student_id FROM student_exams,subjects where score<50 and subject_id=subjects.id and subjects.name='C');
+

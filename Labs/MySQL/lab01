@@ -1,0 +1,150 @@
+mysql> CREATE DATABASE iti
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| iti                |
+| lab07              |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS `students`  (id int primary key AUTO_INCREMENT, Name varchar(40), email varchar(40), Address text) DEFAULT CHARSET=utf8;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> SHOW CREATE TABLE `students`
+    -> ;
++----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table    | Create Table                                                                                                                                                                                                         |
++----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| students | CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(40) DEFAULT NULL,
+  `email` varchar(40) DEFAULT NULL,
+  `Address` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS `student_phones` (student_id int, phone int, PRIMARY KEY(`student_id`, `phone`), FOREIGN KEY(`student_id`) REFERENCES `students` (`id`)) DEFAULT CHARSET=utf8;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS `subjects` (id int PRIMARY KEY AUTO_INCREMENT,Name VARCHAR(40), Description text, Max_score int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS `students_subjects` (student_id int, subject_id int, Date date, PRIMARY KEY(`student_id`, `subject_id`), FOREIGN KEY(`student_id`) REFERENCES `students` (`id`), FOREIGN KEY(`subject_id`) REFERENCES `subjects` (`id`));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE `Exams` (id int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS `student_exams` (student_id int, subject_id int, exam_id int, PRIMARY KEY(student_id, subject_id, exam_id), Date date, score int, max_score int, FOREIGN KEY(`student_id`) REFERENCES `students` (`id`), FOREIGN KEY(`subject_id`) REFERENCES `subjects` (`id`), FOREIGN KEY(`exam_id`) REFERENCES `Exams` (`id`));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO students VALUES('','tharwat', 'tharwat@gmail', 'rehab');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> INSERT INTO students VALUES('','mostafa', 'mostafa@gmail', 'yasmeen');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+
+mysql> INSERT INTO students VALUES('','Abdelnaby', 'Ahmed@gmail', 'shoubra');
+Query OK, 1 row affected, 1 warning (0.02 sec)
+
+mysql> INSERT INTO students VALUES('','saied', 'mohamed@gmail', 'tahrir');
+Query OK, 1 row affected, 1 warning (0.02 sec)
+
+mysql> INSERT INTO students VALUES('','bassam', 'bassam@gmail', 'matareya');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> SELECT * from students;
++----+-----------+---------------+----------+
+| id | Name      | email         | Address  |
++----+-----------+---------------+----------+
+|  1 | tharwat   | tharwat@gmail | rehab    |
+|  2 | mostafa   | mostafa@gmail | yasmeen  |
+|  3 | Abdelnaby | Ahmed@gmail   | shoubra  |
+|  4 | saied     | mohamed@gmail | tahrir   |
+|  5 | bassam    | bassam@gmail  | matareya |
++----+-----------+---------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> INSERT INTO student_phones VALUES('1', 1516546);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO student_phones VALUES('2', 116546);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO student_phones VALUES('3', 126546);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO student_phones VALUES('4', 126547);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO student_phones VALUES('5', 26547);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> desc subjects
+    -> ;
++-------------+---------+------+-----+---------+----------------+
+| Field       | Type    | Null | Key | Default | Extra          |
++-------------+---------+------+-----+---------+----------------+
+| id          | int(11) | NO   | PRI | NULL    | auto_increment |
+| Description | text    | YES  |     | NULL    |                |
+| Max_score   | int(11) | YES  |     | NULL    |                |
++-------------+---------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> ALTER TABLE students DROP COLUMN Gender;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE students ADD COLUMN Gender ENUM("Male", "Female");
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+mysql> ALTER TABLE subjects ADD COLUMN Name varchar(40) AFTER id;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO subjects VALUES('', 'C', 'Introduction to Programming', 100);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO subjects VALUES('', 'C++', 'OOP Principles', 100);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> INSERT INTO subjects VALUES('', 'Java', 'Java programming', 100);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> INSERT INTO subjects VALUES('', 'MySQL', 'MYSQL', 100);
+Query OK, 1 row affected, 1 warning (0.02 sec)
+
+mysql> INSERT INTO subjects VALUES('', 'OS', 'Introduction to Operating Systems', 100);
+Query OK, 1 row affected, 1 warning (0.02 sec)
+
+mysql> INSERT INTO students_subjects VALUES (1,1,2019/15/1);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO students_subjects VALUES (2,2,2019/15/2);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO students_subjects VALUES (3,3,2019/15/3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO students_subjects VALUES (4,4,2019/15/4);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO students_subjects VALUES (5,5,2019/15/5);
+Query OK, 1 row affected (0.02 sec)
+
+
+

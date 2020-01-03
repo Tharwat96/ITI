@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.javafx.cursor.CursorType;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -82,7 +83,6 @@ public class Main extends Application {
         });
 
 
-
         /*EDIT menu*/
         Menu edit = new Menu("Edit");
         SeparatorMenuItem sep2 = new SeparatorMenuItem();
@@ -95,11 +95,74 @@ public class Main extends Application {
         MenuItem selectAll = new MenuItem("Select All");
         edit.getItems().addAll(undo, sep2, cut, copy, paste, delete, sep3, selectAll);
 
+            //event handlers
+        //undo event
+        undo.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                textArea.undo();
+            }
+        });
+
+        //cut event
+        cut.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                textArea.cut();
+            }
+        });
+
+        //copy event
+        copy.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                textArea.copy();
+            }
+        });
+
+        //paste event
+        paste.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                textArea.paste();
+            }
+        });
+
+        //delete event
+        delete.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                textArea.deleteText(textArea.getSelection());
+
+            }
+        });
+
+        //select all event
+        selectAll.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                textArea.selectAll();
+            }
+        });
 
         /*About menu*/
         Menu about = new Menu("About");
         MenuItem aboutApp = new MenuItem("About FX Notepad");
         about.getItems().addAll(aboutApp);
+            //event handler
+        //about event
+        about.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("About FX Notepad");
+                alert.setHeaderText("Created by Tharwat");
+                alert.setContentText("v0.01");
+                alert.show();
+            }
+        });
+
+
         /*Compile menu TODO*/
 
         /*create MenuBar and add menus to them*/

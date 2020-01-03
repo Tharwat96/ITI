@@ -11,7 +11,6 @@ public class ChatClient{
     private Socket s;
     private DataInputStream dataInputStream;
     private PrintStream printStream;
-    Thread th1;
     public ChatClient()
     {
         ui = new SampleUI(this);
@@ -52,7 +51,7 @@ public class ChatClient{
 
     public static void main(String[] args) {
         ChatClient chatClient1 = new ChatClient();
-        ChatClient chatClient2 = new ChatClient();
+//        ChatClient chatClient2 = new ChatClient();
     }
     public void sendMsg(String s)
     {

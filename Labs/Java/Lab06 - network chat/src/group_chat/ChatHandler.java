@@ -1,20 +1,22 @@
 package group_chat;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.Socket;
+import java.nio.file.Files;
 import java.util.Vector;
 
 class ChatHandler extends Thread
 {
     DataInputStream dataInputStream;
     PrintStream printStream;
+    File file = new File("chat.txt");
+    DataInputStream fileInputStream;
+    PrintStream filePrintStream;
+    PrintWriter writeFile = new PrintWriter(new FileWriter("chat.txt", true));
     static Vector<ChatHandler> clientsVector = new Vector<ChatHandler>();
 
 
-    public ChatHandler(Socket s)
-    {
+    public ChatHandler(Socket s) throws IOException {
         try
         {
             dataInputStream = new DataInputStream(s.getInputStream());
@@ -26,7 +28,8 @@ class ChatHandler extends Thread
         {
             e.printStackTrace();
         }
-
+        FileReader fileReader = new FileReader(file);
+        sendMessageToAll(fileReader.toString());
 
 
     }
@@ -46,6 +49,8 @@ class ChatHandler extends Thread
             try
             {
                 String str = dataInputStream.readLine();
+                if(str != null)
+                    writeFile.append(str + "\n");
                 sendMessageToAll(str);
 
             } catch (IOException e) {

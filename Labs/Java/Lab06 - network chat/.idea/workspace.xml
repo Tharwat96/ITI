@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f21543b6-6bf5-4d5a-8013-8cca774f4812" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/META-INF/Lab06 - network chat.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/group_chat/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_chat/ChatClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/group_chat/ChatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_chat/ChatHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/group_chat/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_chat/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/group_chat/SampleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_chat/SampleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/testdir/Chat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -163,6 +168,9 @@
       <workItem from="1577713023400" duration="121000" />
       <workItem from="1577740261065" duration="1281000" />
       <workItem from="1577741557581" duration="11000" />
+      <workItem from="1577743470130" duration="172000" />
+      <workItem from="1577744060563" duration="634000" />
+      <workItem from="1577797304704" duration="4322000" />
     </task>
     <servers />
   </component>
@@ -190,26 +198,30 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="804" y="408" width="301" height="219" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1577188119405" />
+    <state x="693" y="264" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577801295912">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="693" y="264" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1577801295912" />
     <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl" timestamp="1577741566241">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1577741566241" />
-    <state width="1872" height="380" key="GridCell.Tab.0.bottom" timestamp="1577713143537">
+    <state width="1872" height="380" key="GridCell.Tab.0.bottom" timestamp="1577801628288">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1872" height="380" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1577713143537" />
-    <state width="1872" height="380" key="GridCell.Tab.0.center" timestamp="1577713143536">
+    <state width="1872" height="380" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1577801628288" />
+    <state width="1872" height="380" key="GridCell.Tab.0.center" timestamp="1577801628286">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1872" height="380" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1577713143536" />
-    <state width="1872" height="380" key="GridCell.Tab.0.left" timestamp="1577713143536">
+    <state width="1872" height="380" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1577801628286" />
+    <state width="1872" height="380" key="GridCell.Tab.0.left" timestamp="1577801628285">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1872" height="380" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1577713143536" />
-    <state width="1872" height="380" key="GridCell.Tab.0.right" timestamp="1577713143536">
+    <state width="1872" height="380" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1577801628285" />
+    <state width="1872" height="380" key="GridCell.Tab.0.right" timestamp="1577801628287">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1872" height="380" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1577713143536" />
+    <state width="1872" height="380" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1577801628287" />
     <state width="902" height="321" key="GridCell.Tab.1.bottom" timestamp="1577205424571">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -250,5 +262,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="624" y="234" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1577647565447" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab06___network_chat$ChatClient.ic" NAME="ChatClient Coverage Results" MODIFIED="1577799534038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>group_chat.*</FILTER>
+    </SUITE>
   </component>
 </project>

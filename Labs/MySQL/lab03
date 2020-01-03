@@ -1,0 +1,91 @@
+1- 
+BEGIN;
+INSERT INTO students VALUES('', 'Asser', 'Abouhelal', 'asser@gmail.com', 'cocoland', '1993-01-05', 'Male');
+INSERT INTO student_exams VALUES(8, 1, '2019-02-16', 83, 100);
+INSERT INTO student_exams VALUES(8, 2, '2019-02-16', 83, 100);
+INSERT INTO student_exams VALUES(8, 3, '2019-02-16', 83, 100);
+COMMIT;
+
+2- 
+SELECT CONCAT(DAY(Date), ' ', MONTHNAME(Date), ' ', YEAR(Date)) FROM student_exams WHERE student_id=8;
+3-
+SELECT CONCAT(FirstName, ' ', LastName) AS Name,DATEDIFF(NOW(), Birthdate)/365.25 AS Age FROM students;
+4-
+SELECT CONCAT(FirstName, ' ', LastName) AS Name, ROUND(Score) AS Score FROM students, student_exams WHERE student_id=id;
+5-
+SELECT CONCAT(FirstName, ' ', LastName) AS Name, YEAR(Birthdate) AS Year_of_birthdate FROM students;
+6- 
+INSERT INTO student_exams VALUES(6, 5, NOW(), 60, 100);
+7- 
+DELIMITER ~
+CREATE FUNCTION welcomeUser(username TEXT)
+RETURNS TEXT
+BEGIN
+RETURN CONCAT('Welcome ', username);
+END~
+DELIMITER ;
+
+8-
+DELIMITER ~
+CREATE FUNCTION multiply(n1 INT, n2 INT)
+RETURNS INT
+BEGIN
+RETURN n1*n2;
+END~
+DELIMITER ;
+
+9-
+
+DELIMITER ~
+CREATE FUNCTION showExams(studentID INT, examID INT)
+RETURNS INT
+BEGIN
+RETURN SELECT score FROM student_exams WHERE student_id=studentID AND exam_id=examID;
+END~
+DELIMITER ;
+
+10-
+DELIMITER ~
+CREATE FUNCTION maxGrade(subName TEXT)
+RETURNS INT
+BEGIN
+RETURN SELECT max_score FROM subjects WHERE Name=subName;
+END~
+DELIMITER ;
+
+11-
+CREATE TABLE Deleted_students LIKE students;
+
+12-
+DELIMITER ~
+CREATE TRIGGER delete_student 
+AFTER DELETE
+ON students
+for each row
+INSERT INTO Deleted_students VALUES(OLD.id, OLD.FirstName, OLD.LastName, OLD.email, OLD.Address, OLD.Birthdate, OLD.Gender);
+~
+DELIMITER ;
+
+13-
+
+
+
+14- CREATE TABLE students_log(id int PRIMARY KEY AUTO_INCREMENT, Type TEXT, Time DATETIME);
+
+DELIMITER ~
+CREATE TRIGGER log_student_insert
+AFTER INSERT
+ON students
+for each row
+INSERT INTO students_log VALUES('', 'INSERT', NOW());
+~
+DELIMITER ;
+
+DELIMITER ~
+CREATE TRIGGER log_student_delete
+BEFORE DELETE
+ON students
+for each row
+INSERT INTO students_log VALUES('', 'DELETE', NOW());
+~
+DELIMITER ;
