@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f21543b6-6bf5-4d5a-8013-8cca774f4812" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/META-INF/Lab06 - network chat.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/ChatHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab06 - network chat/group_chat/SampleUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/group_chat/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_chat/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/group_chat/ChatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_chat/ChatHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/group_chat/SampleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_chat/SampleUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/out/production/lab09 - JavaFX Notepad/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab09 - JavaFX Notepad/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/git/tic-tac-toe/client" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -171,6 +156,9 @@
       <workItem from="1577743470130" duration="172000" />
       <workItem from="1577744060563" duration="634000" />
       <workItem from="1577797304704" duration="4322000" />
+      <workItem from="1578161372434" duration="2355000" />
+      <workItem from="1578177918028" duration="1946000" />
+      <workItem from="1578248405013" duration="9000" />
     </task>
     <servers />
   </component>
@@ -202,10 +190,11 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="693" y="264" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1577801295912" />
-    <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl" timestamp="1577741566241">
-      <screen x="0" y="0" width="1920" height="1032" />
+    <state x="743" y="277" width="424" height="486" key="FileChooserDialogImpl" timestamp="1578248411662">
+      <screen x="0" y="0" width="1920" height="1042" />
     </state>
     <state x="743" y="274" width="424" height="487" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1577741566241" />
+    <state x="743" y="277" width="424" height="486" key="FileChooserDialogImpl/0.0.1920.1042@0.0.1920.1042" timestamp="1578248411662" />
     <state width="1872" height="380" key="GridCell.Tab.0.bottom" timestamp="1577801628288">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -242,10 +231,11 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="443" y="93" width="1024" height="848" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1577219657310" />
-    <state x="141" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1577741557825">
-      <screen x="0" y="0" width="1920" height="1032" />
+    <state x="141" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1578248405625">
+      <screen x="0" y="0" width="1920" height="1042" />
     </state>
     <state x="141" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1577741557825" />
+    <state x="141" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1042@0.0.1920.1042" timestamp="1578248405625" />
     <state x="20" y="255" width="900" height="525" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577204281814">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
