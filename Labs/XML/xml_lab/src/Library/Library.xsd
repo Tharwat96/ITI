@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="Library">
+        <xs:complexType>
+            <xs:group ref="LibraryGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="LibraryGroup">
+        <xs:sequence>
+            <xs:element name="Location" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Librarian" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element ref="Books" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+        <xs:element name="Books">
+        <xs:complexType>
+            <xs:group ref="BooksGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="BooksGroup">
+        <xs:sequence>
+            <xs:element ref="Book" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:element name="Book">
+        <xs:complexType>
+            <xs:group ref="BookGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="BookGroup">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string"/>
+            <xs:element name="ISBN" maxOccurs="1">
+                <xs:complexType>
+                    <xs:attribute name="ID" type="xs:positiveInteger" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Author" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>   
+            <xs:element name="Preface" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="Parts" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+        <xs:element name="Parts">
+        <xs:complexType>
+            <xs:group ref="PartsGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="PartsGroup">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Summary" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="Chapter"  minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+        <xs:element name="Chapter">
+        <xs:complexType>
+            <xs:group ref="ChapterGroup" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="ChapterGroup">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string"/>
+            <xs:element name="Summary" type="xs:string"/>
+            <xs:element ref="Section" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+        <xs:element name="Section">
+        <xs:complexType>
+            <xs:group ref="SectionGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="SectionGroup">
+        <xs:sequence>
+            <xs:element name="Paragraph" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

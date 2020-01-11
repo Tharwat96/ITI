@@ -1,0 +1,72 @@
+{
+    "location": "Cairo",
+    "description": "Great library with great books",
+    "librarian": "jaxon",
+    "book":[
+    {
+        "title": "Introduction to C",
+        "isbn": "7845566636516",
+        "author": "el prince",
+        "preface": "great book with great contents",
+        "parts":[  
+        {
+            "title": "part one",
+            "chapters":[
+            {
+                "title": "Introduction",
+                "summary": "great book",
+                "sections":[
+                {
+                    "paragraph": "paragraph contents of paragraph one"
+                },
+                {
+                    "paragraph": "paragraph contents of paragraph two"
+                }]
+			},
+			{
+                "title": "getting started",
+                "summary": "great book",
+                "sections":[
+                {
+                    "paragraph": "paragraph contents of paragraph one"
+                },
+                {
+                    "paragraph": "paragraph contents of paragraph two"
+                }]
+			}]
+		}]
+	},
+	{
+        "title": "Introduction to C++",
+        "isbn": "7845566636516",
+        "author": "el prince",
+        "preface": "great book with great contents",
+        "parts":[  
+        {
+            "title": "part one",
+            "chapters":[
+            {
+                "title": "Introduction",
+                "summary": "great book",
+                "sections":[
+                {
+                    "paragraph": "paragraph contents of paragraph one"
+                },
+                {
+                    "paragraph": "paragraph contents of paragraph two"
+                }]
+			},
+			{
+                "title": "getting started",
+                "summary": "great book",
+                "sections":[
+                {
+                    "paragraph": "paragraph contents of paragraph one"
+                },
+                {
+                    "paragraph": "paragraph contents of paragraph two"
+                }]
+			}]
+		}]
+	}]
+}

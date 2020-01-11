@@ -1,0 +1,4 @@
+function returnIndex(str, letter)
+{
+    
+}

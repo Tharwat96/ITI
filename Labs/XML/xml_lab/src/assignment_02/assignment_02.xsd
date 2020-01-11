@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+        <xs:element name="BookStore">
+        <xs:complexType>
+            <xs:group ref="BookStoreGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="BookStoreGroup">
+        <xs:sequence>
+            <xs:element ref="Book"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:element name="Book">
+        <xs:complexType>
+            <xs:group ref="BookGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="BookGroup">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Author" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ISBN" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Publisher" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

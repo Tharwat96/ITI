@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--<!DOCTYPE Library SYSTEM "Library.dtd">-->
+
+<!--<Library
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Library-anonymous.xsd">-->
+    
+<Library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Library.xsd">
+    <Location>Cairo</Location>
+    <Description>Great Library for resources in Sports, CS, and Physics.</Description>
+    <Librarian>Jaxon</Librarian>
+    <Books>
+        <Book>
+            <Title>Introduction to C</Title>
+            <ISBN ID="145875698325486"/>
+            <Author>El Prince</Author>
+            <Preface><![CDATA[This is the preface of the book]]></Preface>
+            <Parts>
+                <Title>Title of the book</Title>
+                <Summary><![CDATA[This is the summary]]></Summary>
+                <Chapter>
+                    <Title>Title of the chapter</Title>
+                    <Summary><![CDATA[Summary of the chapter]]></Summary>
+                    <Section>
+                        <Paragraph><![CDATA[This is a paragraph of the first chapter]]></Paragraph>
+                        <Paragraph><![CDATA[This is a paragraph of the second chapter]]></Paragraph>
+                    </Section>
+                </Chapter>    
+                <Chapter>
+                    <Title>Chapter 1</Title>
+                    <Summary><![CDATA[This is the summary of the chapter]]></Summary>
+                    <Section>
+                        <Paragraph><![CDATA[This is the first paragraph of the chapter]]></Paragraph>
+                        <Paragraph><![CDATA[This is the second paragraph of the chapter]]></Paragraph>
+                    </Section>
+                </Chapter>
+                <Chapter>
+                    <Title>Chapter 2</Title>
+                    <Summary><![CDATA[This is the summary of the chapter]]></Summary>
+                    <Section>
+                        <Paragraph><![CDATA[This is the first paragraph of the chapter]]></Paragraph>
+                        <Paragraph><![CDATA[This is the second paragraph of the chapter]]></Paragraph>
+                    </Section>
+                </Chapter>
+            </Parts>
+        </Book>
+    </Books>
+</Library>

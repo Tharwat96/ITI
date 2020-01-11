@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ENTITY myLocation "Cairo">
+
+<!ELEMENT Library (Location, Description, Librarian+, Books)>
+<!ELEMENT Location (#PCDATA)>
+<!ATTLIST Location city ( Cairo | Alexandria )>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Librarian (#PCDATA)>
+<!ELEMENT Books (Book+)>
+<!ELEMENT Book (Title, ISBN, Author+, Preface, Parts)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT ISBN EMPTY>
+<!ATTLIST ISBN ID ID #REQUIRED>
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT Preface (#PCDATA)>
+<!ELEMENT Parts (Title, Summary, Chapter+) >
+<!ELEMENT Summary (#PCDATA)>
+<!ELEMENT Chapter (Title, Summary, Section+)>
+<!ELEMENT Section (Paragraph+)>
+<!ELEMENT Paragraph (#PCDATA)>
