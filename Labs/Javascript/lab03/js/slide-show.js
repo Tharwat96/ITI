@@ -44,10 +44,20 @@ function next()
 
 }
 
+function showFirst(){
+    counter = 0;
+    img.setAttribute('src', src[counter]);
+}
+
+function showLast(){
+    counter = 2;
+    img.setAttribute('src', src[counter]);
+}
+
 var buttons = document.getElementsByTagName("button");
 buttons[0].addEventListener("click", play);
 buttons[1].addEventListener("click", stop);
-buttons[2].addEventListener("click", previous); //previous arrow
+buttons[2].addEventListener("click", showFirst); //first arrow
 buttons[3].addEventListener("click", previous); //previous button
 buttons[4].addEventListener("click", next); //next button
-buttons[5].addEventListener("click", next); //next arrow
+buttons[5].addEventListener("click", showLast); //last arrow
