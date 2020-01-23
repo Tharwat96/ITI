@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Lab1 - Form</title>
+</head>
+
+<body>
+	<form action="#">
+		<label for="name">Name</label>
+		<input name="name" type="text" autofocus required><br><br>
+		<label for="email">Email</label>
+		<input name="email" type="email" required><br><br>
+		<label for="password">Password</label>
+		<input name="password" type="password" minlength="8" required><br><br>
+		<label for="salary">Salary</label>
+		<input name="salary" type="range" min="0" max="500" oninput="output.value = '$'+salary.value">
+		<output name="output"></output><br><br>
+		<label for="age">Age</label>
+		<input name="age" type="number" min="0" max="120" required><br><br>
+		<input type="submit">
+	</form>
+</body>
+
+</html>
