@@ -1,0 +1,78 @@
+2. db.help()
+3. 
+    db
+    show dbs
+4.  use Facebook
+5.  
+> db.createCollection("posts")
+6. 
+
+db.createCollection("users", 
+    {capped:true, size:5242880, max:10, validator:
+        {$and:
+            [{username:{$type:"string"}},
+            {email:{$regex:/@gmail\.com$/}}
+            ]
+        }
+    }
+)
+
+db.createCollection( "contacts",
+   { validator: { $or:
+      [
+         { phone: { $type: "string" } },
+         { email: { $regex: /@mongodb\.com$/ } },
+         { status: { $in: [ "Unknown", "Incomplete" ] } }
+      ]
+   }
+} )
+
+7. 
+
+for(let i = 2; i<22; i++){
+    db.posts.insert({_id:i, "username": "Mohamed", "name":`post${i}`, "likes":`${i}`, "comments": i})
+}
+
+db.posts.insert({_id:50, "username": "Ahmed", "name":"post50", "likes": 16, "comments": "yest"})
+
+
+8. 
+
+for(let i = 2; i<22; i++){
+    db.users.insert({_id:i, "username":`user${i}`, "email":`ahmed${i}@gmail.com`})
+}
+
+9. 
+
+db.user.find()
+
+10.
+
+db.posts.insert({_id:50, "username": "Ahmed", "name":"post50", "likes": 16, "comments": "yest"})
+
+
+db.posts.insert({_id:50, "username": "Mohamed", "name":"post50", "likes": 16, "comments": "yest"})
+
+
+db.posts.find({"username":"Mohamed"},{})
+
+11.
+
+db.posts.update({username:{$eq:"Mohamed"}},{$set:{likes:10000}},{multi:true})
+
+
+12. 
+
+db.posts.remove({username:"Mohamed"})
+
+19.
+
+mongorestore --db Inventory ~/Desktop/Inventory
+
+20. 
+
+db.products.find({price:{$lt:1000, $gt:5000}},{})
+
+21.
+
+db.products.find({},{})
