@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/lab3_1_factorial.dir/main.c.o  -o lab3_1_factorial 

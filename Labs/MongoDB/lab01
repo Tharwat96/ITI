@@ -71,8 +71,44 @@ mongorestore --db Inventory ~/Desktop/Inventory
 
 20. 
 
-db.products.find({price:{$lt:1000, $gt:5000}},{})
+/*Select products with price less than 1000 or greater than 5000. */
+
+db.products.find( { $or: [ { price: { $lt: 1000 } }, { price: { $gt:5000 } } ] }, {})
 
 21.
 
-db.products.find({},{})
+/* Select products where name field contains at least one element that
+starts with LG , To ,Sa. */
+
+db.products.find( { name: { $in: [ /^LG/, /^To/, /^Sa/ ] } }, {})
+
+22. 
+
+/**)Select products where the stock field value is an array and should
+contain numbers 99 , 999. */
+
+db.products.find( { stock: { $all: [ 99, 999 ] } }, {} ).pretty()
+
+23. ??
+
+/**Select products with stock field contains value is greater than 99. */
+
+db.products.find( { stock: { elemMatch: { $gt: 99 } } }, {} ).pretty()
+
+24.
+
+/**Select products where stock field contains 3 elements. */
+
+db.products.find( { stock: { $size: 3 } }, {} ).pretty()
+
+25. 
+
+/**Select products where vendor is not Apple , Sony, LG or HP. */
+
+db.products.find( { vendor: { $nin: [ 'Apple', 'Sony', 'LG', 'HP'] } },{} ).pretty()
+
+26.
+
+/**Select products where the price field is not exists. */
+
+db.products.find( { price: { $exists: false } }, {} ).pretty()

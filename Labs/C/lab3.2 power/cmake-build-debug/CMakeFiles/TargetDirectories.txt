@@ -1,0 +1,3 @@
+/home/tharwatabouhelal/CLionProjects/lab3.2 power/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tharwatabouhelal/CLionProjects/lab3.2 power/cmake-build-debug/CMakeFiles/lab3_2_power.dir
+/home/tharwatabouhelal/CLionProjects/lab3.2 power/cmake-build-debug/CMakeFiles/edit_cache.dir

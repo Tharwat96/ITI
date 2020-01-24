@@ -1,0 +1,3 @@
+/home/tharwatabouhelal/CLionProjects/lab3.1 factorial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tharwatabouhelal/CLionProjects/lab3.1 factorial/cmake-build-debug/CMakeFiles/lab3_1_factorial.dir
+/home/tharwatabouhelal/CLionProjects/lab3.1 factorial/cmake-build-debug/CMakeFiles/edit_cache.dir
