@@ -1,0 +1,53 @@
+2- Create two simple html pages named “page1.html, page2.html” then use the suitable
+directive to automatically redirect from localhost/page1.html to
+localhost/page2.html.
+
+touch /var/www/html/page1.html /var/www/html/page2.html
+Redirect /page1.html /page2.html
+
+3- Ask for user name and password when accessing a directory
+
+<Directory  "/var/www/html/private/">
+        AuthType Basic
+        AuthName "Required"
+        AuthUserFile "/var/www/html/.htpasswd"
+        Require valid-user
+</Directory>
+
+
+4- Apply authentication before downloading PDF files.
+
+<FilesMatch "/.(pdf)$">
+        AuthType Basic
+	AuthName "Required"
+        AuthUserFile "/var/www/passwords/html/.htpasswd"
+        Require valid-user
+</FilesMatch>
+
+5- Create a directory then allow access to one of your classmates only.
+
+<Directory  "/var/www/html/private/">
+        Order Deny,Allow
+        Deny from all
+        Allow from 7.7.7.54
+</Directory>
+
+
+6- Disable listing the directory content (hint use indexes)
+
+<Directory  "/var/www/html/private/">
+        Options -Indexes
+</Directory>
+ 
+OR
+
+create a .htaccess file with 
+        Options -Indexes
+in the folder path
+ 
+7- Change the default index page to be default.html instead of index.html (use
+DirectoryIndex)
+
+DirectoryIndex page1.html
+
+

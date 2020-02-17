@@ -1,0 +1,3 @@
+FROM apache:v2
+EXPOSE 80
+COPY hello.html /usr/local/apache2/htdocs/hello.html

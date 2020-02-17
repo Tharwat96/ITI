@@ -1,0 +1,59 @@
+ 
+1. Problem 1:
+    • Run the container hello-world:
+        $ sudo docker run -it hello-world
+        $ sudo docker run -it --name hello_world hello-world
+    • Check the container status
+        $ sudo docker ps
+    • Start the stopped container
+        $ sudo docker start -i hello_world
+    • Remove the container 
+        $ sudo docker rm hello_world
+    • Remove the image
+        $ sudo docker image rm hello_world
+2. Problem 2:
+    • Run container centos or ubuntu in an interactive mode
+        $ sudo docker run -it --name ubuntu ubuntu
+    • Run the following command in the container “echo docker ”
+        $ sudo docker exec -i ubuntu echo docker
+    • Open a bash shell in the container and touch a file named hello-docker
+        $ sudo docker exec -it ubuntu bash
+            # touch hello-docker
+    • Stop the container and remove it. Write your comment about the file hello-docker
+        $ sudo docker kill ubuntu && sudo docker rm ubuntu
+    • Remove all stopped containers
+        sudo docker container prune
+3. Problem 3:
+    • Run a container httpd with name apache and attach a volume 2 volumes to the container
+        ◦ Volume1 for containing static html file
+        ◦ Volume2 for containing httpd configuration
+        
+            $ sudo docker run -v apache-htdocs:/usr/local/apache2/conf -v apache-htdocs:/usr/local/apache2/htdocs --name apache httpd
+
+    • Remove the container
+        $ sudo docker kill apache
+        $ sudo docker rm apache
+    • Run a new container with the following:
+        ◦ Attach the 2 volumes that was attached to the previous container
+            $ sudo docker run -v apache-htdocs:/usr/local/apache2/conf -v apache-htdocs:/usr/local/apache2/htdocs --name apache httpd
+
+        ◦ Map port 80 to port 9898 on your host machine
+            $ sudo docker run -p 9898:80 -v apache-htdocs:/usr/local/apache2/conf -v apache-htdocs:/usr/local/apache2/htdocs --name apache httpd
+        ◦ Access the html files from your browser
+            localhost:9898
+4. Problem 4:
+    • Run the image httpd again without attaching any volumes
+        $ sudo docker run -p 9898:80 --name apache httpd
+    • Add html static files to the container and make sure they are accessible
+        $ sudo docker cp ~/hello.html apache:/usr/local/apache2/htdocs
+    • Commit the container with image name IMAGE_NAME
+        $ sudo docker commit 563f0430a562 IMAGE_NAME      ##  must be a lower case
+        $ sudo docker commit 563f0430a562 image_name
+    • Create a dockerfile for the previous image and build the image from this dockerfile
+        
+5. Problem 5:
+    • Create a volume called mysql_data, then deploy a MySQL database called app-database. Use the mysql latest image, and use the -e flag to set MYSQL_ROOT_PASSWORD to P4sSw0rd0!.Mount the mysql_data volume to /var/lib/mysql. The container should run in the background.
+    
+        $ sudo docker container create mysql_data
+        $ sudo docker run -it -d -e MYSQL_ROOT_PASSWORD=p4sSw0rd0! -v mysql_data:/var/lib/mysql --name app-database mysql 
+

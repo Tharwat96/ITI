@@ -1,0 +1,58 @@
+Docker Lab2
+1. Problem 1:
+    • Create bridge network with subnet 192.168.0.0/24.
+        $ sudo docker network create --driver bridge --subnet=192.168.0.0/24 br0
+    • Run 2 containers and attach containers to this network.
+        $ sudo docker start ubuntu app-database
+        $ sudo docker network connect br0 ubuntu
+        $ sudo docker network connect br0 app-database
+    • Create another bridge network with subnet 10.5.0.0/24.
+        $ sudo docker network create --driver bridge --subnet=10.5.0.0/24 br1
+    • Run any container and attach it to the new network.
+        $ sudo docker start apache 
+        $ sudo docker network connect br1 apache
+    • Make sure that the containers at different network can’t ping each other
+        $ 
+2. Problem 2:
+    • Create static html file
+    • Write Dockerfile to build image based on httpd to host the html file and specify the following
+    • Copy the html file.
+    • Copy a new configuration file to listen on port 9999 instead of 80
+    • Open the port 9999 in the container
+    • Add environment variable CONTAINER with value docker .
+    • Add startup command to echo the variable
+        FROM httpd
+        COPY my-httpd.conf /usr/local/apache2/conf/my-httpd.conf
+        COPY hello.html /usr/local/apache2/htdocs/hello.html
+        ENV CONTAINER docker
+        ENTRYPOINT echo $CONTAINER
+
+3. Problem 3:
+    • Create a docker compose to up mysql container, any web container and web server ( nginx ) depend on mysqldb.
+    • Add volume for mysqldb
+4.Problem 4:
+    • Create a Dockerfile to deploy weather-app application:
+        1.
+        You will use node:alpine as the base image.
+        2.
+        create a directory for the source code: /node/weather-app.
+        3.
+        Add the code from src to /node/weather-app on the image.
+        4.
+        Set /node/weather-app as the working directory.
+        5.
+        Execute an npm install to install the dependencies.
+        6.
+        Create an argument called APP_VERSION that will set the version of the
+        application.
+        7. Set an environment variable called NODE_ENV and set it to production.
+        8. Copy /node/weather-app from the source build stage to /var/weather-app.
+        9. Set /var/weather-app as the working directory.
+        10. Expose port 3000.
+        11. Set ./bin/www as the entrypoint.
+        12. Build the image.
+Problem 5:
+    • Use docker compose to deploy ghost platform (image: ghost:1-alpine)(Ghost is a free and open source blogging platform written in JavaScript)
+    • Use mysql database instead of sqlite
+
+ 

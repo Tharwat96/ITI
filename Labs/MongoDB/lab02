@@ -1,0 +1,90 @@
+//1. Display products which available in 4 stocks at the same time.
+
+db.products.find({stock:{$size:4}},{}).pretty()
+
+//2. Increase all products by 500 EGP.
+
+db.products.update({},{$inc:{price:500}},{multi:1})
+
+//3. Replace stock #5 with #20 in all products.
+
+db.products.update({stock:5},{$set: {'stock.$':20}},{multi:1})
+
+//4. Remove stock 70 from all products.
+
+db.products.update({},{$pull: {stock:55}},{multi:1})
+
+//5. Display only product name and vendor phone number.
+
+db.products.find({},{_id:0,name:1,"vendor.phone":1})
+
+//6. Rename vendor field to shop.
+
+db.products.update({},{$rename: {"vendor": "shop"}},{multi:1})
+
+//7. Insert new document with name vodafone , category, price and quantity fields if the price is less than 100.
+
+db.products.update({price: {$lt:100}},{$set:{"name":"vodafone","category":"boom","price":50,"quantity":400}},{multi:1,upsert:1})
+
+//8. How to create user?
+
+db.createUser(
+    {
+      user: "tharwat",
+      pwd: passwordPrompt(),  // Or  "<cleartext password>"
+      roles: [ "readWrite", "dbAdmin" ]
+    }
+ )
+
+ //9. Display number of products per category.
+
+db.products.aggregate([{$group:{_id:"$category", count:{$sum:1}}}])
+
+//????????? exists
+db.products.aggregate([{$match:{category}},{$group:{_id:"$category", count:{$sum:1}}}])
+
+ //10. Display max category products price.
+
+db.products.aggregate([{$group:{_id:"$category", maxPrice:{$max:"$price"}}}])
+
+//11. Display the most expensive product.
+
+db.products.aggregate([{$group:{_id:"$category", maxPrice:{$max:"$price"}}},{$sort:{"maxPrice":-1}},{$limit:1}])
+
+db.products.find().sort({price:-1}).limit(1)
+
+//12. Import Blog Database using this command in terminal
+
+//  mongorestore --db blod /home/tharwat-manjaro/GoogleDrive/ITI Open Source Intake40/[DEP] Cloud Platform Development/MongoDB/Blog/
+ 
+//13. Create text index for post content field.
+
+db.post.createIndex({content:"text"})
+
+//14. Retrieve all posts which have “hello” word
+
+db.post.find( { $text: { $search: "-hello" } } )
+db.post.find( { $text: { $search: "test" } } )
+
+//15. Retrieve all posts which have not “hello” word.
+// db.post.find({content: {$regex: /^((?!hello).)*$/}},{})
+
+//16. Retrieve all post which have “hello world ” exactly.
+
+db.post.find({content: {$eq: "hello world"}},{})
+
+//17. Export Blog database.
+
+// mongodump --db blog
+
+//18. Drop blog database.
+// use blog
+// db.dropDatabase()
+
+//19. What is the maximum number of Indexes per collection allowed? => 64
+
+//20. What is the maximum size of an Index key? => 1024B
+//21. What is collation in indexes. => hey provide a set of rules to use when comparing strings that comply with the conventions of a particular language, such as Spanish or German. If no collation is specified, the server sorts strings based on a binary comparison.
+//22. Which of the following are stages of aggregation:( $sort , $skip , $drop ,$limit ) => $sort , $skip ,$limit
+//23. Mention the command to list all the indexes on a particular collection. => db.collectionName.getIndexes()
+
