@@ -1,0 +1,21 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/funset_2.13-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/common[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/common/package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	common/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/common/package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	funsets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/funsets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	funsets/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/funsets/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	funsets/FunSets.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/funsets/FunSets.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	funsets/Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/funsets/Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	funsets/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/funsets/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	funsets/FunSets$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/funset/target/scala-2.13/classes/funsets/FunSets$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

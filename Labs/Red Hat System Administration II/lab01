@@ -1,0 +1,57 @@
+1. Use systemctl to view the status of all the system services.
+	sudo systemctl list-unit-files --type service
+2. Change the default run level back to multi-user.target and reboot.
+	sudo systemctl set-default multi-user.target 
+3. Send mail to the root user.
+	echo "test" > mailx -s "mail test admin2" root
+4. Verify that you have received this mail.
+	tail -20 /var/spool/mail/root
+5. Use  systemctl utility to stop postfix service
+	sudo systemctl stop postfix.service 
+6. Send mail again to the root user.
+	echo "test" > mailx -s "mail test admin2" root
+7. Verify that you have received this mail.
+	nothing gets sent
+8. Use systemctl utility to start postfix service
+	sudo systemctl start postfix.service
+9. Verify that you have received this mail.
+	tail -20 /var/spool/mail/root
+	RECEIVED
+10. Edit in the GRUB2 configuration file and change the timeout variable equal 20 seconds.
+	sudo vim /etc/default/grub
+	edit file --> GRUB_TIMEOUT="20"
+	sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+11.  Edit in the GRUB2 configuration file and change your default operating system
+	sudo vim /etc/default/grub
+	edit file --> GRUB_DEFAULT="CentOS Linux (5.4.7-1.el7.elrepo.x86_64) 7 (Core)"
+	sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+12. Install a new printer called "tty12" using the system-config-printer utility. Have the printer queue be "/dev/tty12" and specify a "Text Only Printer" for its model type.
+	ipps://dev/tty12
+	generic@ipps://dev/tty12`
+13. Print the file /etc/hosts to the printer and view the /dev/tty12 console to ensure that the print job went to the "printer".
+	lpr -P generic /etc/hosts
+14. Prevent jobs from leaving the tty12 printer queue to the printer. Do not prevent users from sending jobs to the tty12 printer queue.
+	sudo cupsdisable --hold generic
+15. Print three files (/etc/hosts, /etc/xinetd.conf, and /etc/hosts.allow) to the tty12 printer
+	lpr -P generic /etc/hosts /etc/xinetd.conf /etc/hosts.allow
+16. View the print queue.
+	lpstat
+17. Remove the second print job from the tty12 printer queue, and then allow the print jobs from the queue to be printed
+	lprm -P generic 2
+18. Prevent print jobs from going to the tty12 printer's print queue.
+	sudo reject generic
+19. Verify this by trying to print the /etc/hosts file.
+	lpr: Destination "generic" is not accepting jobs.
+20. Delete the tty12 printer with the lpadmin command.
+	lpadmin -x generic
+21. You want to know some information about the status of the system every ten minutes today between the hours of  8:00 AM and 5:00 PM. to help investigate some performance issues you have been having. You suspect it might be memory related and want to keep an eye on those resources.
+	*/10 8-17 * * * echo "test"
+22. Use mail as the root user to check for e-mail from the cron jobs you have scheduled.
+	mail
+	cat /var/spool/mail/root
+23. How could you send the output from these cron jobs to another e-mail address (the manager user)?
+	MAILTO=manager
+	*/10 8-17 * * * echo "test"
+24. Use mail as the manager user to check for e-mail from the cron jobs you have scheduled.
+	mail
+	cat /var/spool/mail/manager
