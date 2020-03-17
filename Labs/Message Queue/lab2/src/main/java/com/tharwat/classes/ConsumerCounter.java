@@ -38,17 +38,16 @@ public class ConsumerCounter
         consumer.subscribe(Arrays.asList(topic));
         // poll for new data
         thread = new Thread(() -> {
+            Producer outputProducer = new Producer("output");
+            String newValue = "";
             while (true)
             {
                 ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
                 for (ConsumerRecord<String, String> record : records)
                 {
-                    logger.info("TEST");
 
                     logger.info("Key: " + record.key() + ", Value: " + record.value());
                     HashMap<String, Integer> map = new HashMap<>();
-                    String sentence = "My home, is my home".toLowerCase();
-                    logger.info("TEST");
 
                     for (String word : record.value().split("\\W"))
                     {
@@ -66,10 +65,14 @@ public class ConsumerCounter
                     }
                     for (Map.Entry<String, Integer> entry : map.entrySet())
                     {
-                        logger.info("TEST");
-                        logger.info(entry.getKey() + ": " + entry.getValue());
+//                        logger.info(entry.getKey() + ": " + entry.getValue());
+                        newValue += entry.getKey() + ": " + entry.getValue() + " ";
                     }
-                    logger.info("new Key: " + record.value() + ", new Value: " + record.value());
+//                    logger.info("newvalue: " + newValue);
+
+                    logger.info("Key: " + record.value() + ", Value: " + newValue);
+                    outputProducer.sendMsg(record.value(), newValue);
+
 
                 }
             }

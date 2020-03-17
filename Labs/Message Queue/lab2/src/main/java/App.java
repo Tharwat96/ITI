@@ -1,3 +1,4 @@
+import com.tharwat.classes.ConsumerCounter;
 import com.tharwat.classes.Consumer;
 import com.tharwat.classes.Producer;
 
@@ -9,7 +10,7 @@ public class App
 //        inputProducer.sendMsg("HELLOOOOOOOOOOOOO");
 //        inputProducer.closeConnection();
 
-        Consumer consumer = new Consumer("input");
+        ConsumerCounter consumer = new ConsumerCounter("input");
         consumer.startThread();
 
     }

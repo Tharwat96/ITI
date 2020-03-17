@@ -34,9 +34,9 @@ public class Producer
 //        producer.close();
     }
 
-    public void sendMsg(String msg)
+    public void sendMsg(String key, String msg)
     {
-        ProducerRecord<String, String> record = new ProducerRecord<String, String>("input", msg);
+        ProducerRecord<String, String> record = new ProducerRecord<String, String>("input", key, msg);
         producer.send(record, new Callback()
         {
             public void onCompletion(RecordMetadata metadata, Exception exception)

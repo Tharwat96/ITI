@@ -252,3 +252,12 @@ INFO  started: Metals version 0.8.1 in workspace '/run/media/tharwat-manjaro/Lin
 INFO  time: initialize in 1.34s
 WARN  no build target for: /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/lab4/objsets/src/main/scala/objsets/TweetSet.scala
 INFO  shutting down Metals
+INFO  started: Metals version 0.8.1 in workspace '/run/media/tharwat-manjaro/Linux-Data/Labs'
+INFO  time: initialize in 0.74s
+WARN  no build tool detected in workspace '/run/media/tharwat-manjaro/Linux-Data/Labs'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target for: /run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/lab4/objsets/src/main/scala/objsets/TweetSet.scala
+INFO  shutting down Metals
+INFO  started: Metals version 0.8.1 in workspace '/run/media/tharwat-manjaro/Linux-Data/Labs'
+INFO  time: initialize in 0.46s
+WARN  no build tool detected in workspace '/run/media/tharwat-manjaro/Linux-Data/Labs'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  shutting down Metals

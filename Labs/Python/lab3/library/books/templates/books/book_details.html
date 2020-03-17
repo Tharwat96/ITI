@@ -1,0 +1,22 @@
+{% extends 'books/base.html' %}
+
+{% block body %}
+
+    <h1>Book details: </h1>
+
+    <img src="{{ MEDIA_URL }}{{ book.cover_pic }}" alt="Image didn't load correctly, try refreshing the page"/>
+    <h2>ID: {{ book.id }}</h2>
+    <h2>Name: {{ book.name }}</h2>
+    <h2>Authors: {% for author in authors %}
+        <ul>
+            <li>
+                <a href="{% url "author_details" author_id=author.id %}">{{ author.name }}</a>
+            </li>
+        </ul>
+    {% endfor %}
+    </h2>
+    <h2>Description:</h2> <p> {{ book.description }} </p>
+
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+8- log all kernel messges to /var/log/kernel
+
+in /etc/rsyslog.conf
+
+remove the hashtag from the third line written below and change the path
+
+# Log all kernel messages to the console.
+# Logging much else clutters up the screen.
+kern.*                                                 /var/log/kernel
+
+9- Your boss thinks it’s a great idea to have one central logging server. Satisfy his requirements
+Hint:
+a. Set up rsyslogd on the "logging server" machine to accept logging messages from other machines.
+	uncomment the following lines
+	
+	$ModLoad imtcp
+	$InputTCPServerRun 514
+
+	$template RemoteLogs,"/var/log/%HOSTNAME%/%PROGRAMNAME%.log"
+	*.* ?RemoteLogs 
+	
+	to allow firewall on tcp port 514:
+
+	sudo firewall-cmd --permanent --add-port=514/tcp
+
+	ON CENTOS, enable selinux to this port:
+	
+	sudo semanage port -a -t syslogd_port_t -p tcp 514
+
+
+b. On the your "workstation", set up rsyslogd to send messages to the "logging server
+
+	add 
+	*.*  @@7.7.7.62:514
+	to /etc/rsyslog.conf
+
+	after the previous load of module and listening to the port 514, we write 		these lines to save files as distinct name <HOSTNAME>/<PROGRAM-NAME>.log in 
+	/var/log
+	in the server
+
+
+c. Test the new setup by using the logger command on the "workstation" to generate a log message
+	sudo systemctl restart rsyslog.service
+	logger -p local7.warn "testttt"
+	
+	
+
+d. Does the message appear in the "logging server's" /var/log/messages file?
+	yes
+e. Why does this message also appear in the "workstation's" /var/log/messages file?
+
+	because the file continues processing and save to the global directives
+
+f. How could you have the message only appear in the "logging server's" files?
+	
+	writing '& ~' after the global saving path of the server as below
+ 
+
+	$template RemoteLogs,"/var/log/%HOSTNAME%/%PROGRAMNAME%.log"
+	*.* ?RemoteLogs 
+	& ~
+
+
