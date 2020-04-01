@@ -1,0 +1,12 @@
+1. Given an int n, return true if it is within 10 of 100 or 200. Note: abs(num)computes the absolute value of a number.
+2. Given two int values, return their sum. Unless the two values are the same, thenreturn double their sum.
+3. Given an int n, return the absolute difference between n and 21, except returndouble the absolute difference if n is over 21.
+4. The number 6 is a truly great number. Given two int values, a and b, return True if either one is 6. Or if their sum or difference is 6. Note: the function abs(num) computes the absolute value of a number.
+5. Given a number n, return True if n is in the range 1..10, inclusive. Unless "outsideMode" is True, in which case return True if the number is less or equal to 1, or greater or equal to 10.
+6. Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it does not count towards the sum.
+7. Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards the sum and values to its right do not count. So for example, if b is 13, then both b and c do not count.
+8. Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+9. Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "".
+10.Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
+11.Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2.
+12.Return the number of even ints in the given array. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1
