@@ -1,7 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0m/run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/lab2/recfun/src/main/scala/recfun/Main.scala:4:33: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `main`'s return type[0m
-[0m[[0m[33mwarn[0m] [0m[0m  def main(args: Array[String]) {[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/run/media/tharwat-manjaro/Linux-Data/Labs/Labs/Scala/lab2/recfun/src/main/scala/recfun/Main.scala:8:32: method + in class Int is deprecated (since 2.13.0): Adding a number and a String is deprecated. Use the string interpolation `s"$num$str"`[0m
-[0m[[0m[33mwarn[0m] [0m[0m        print(pascal(col, row) + " ")[0m
-[0m[[0m[33mwarn[0m] [0m[0m                               ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
